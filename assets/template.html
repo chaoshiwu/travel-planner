@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>{{TITLE}}</title>
+<style>{{LEAFLET_CSS}}</style>
+<style>{{PAGE_CSS}}</style>
+</head>
+<body>
+
+{{HERO}}
+
+<div class="wrap">
+
+{{WEATHER}}
+
+{{MAP}}
+
+{{OVERVIEW}}
+
+<h2 class="sec">每日行程</h2>
+<div id="daysBox"></div>
+
+{{RESERVE}}
+
+{{ADVICE}}
+
+{{BUDGET}}
+
+{{PITFALLS}}
+
+{{CHECKLIST}}
+
+{{TREE}}
+
+{{FOOTER}}
+</div>
+
+<div class="kml-mask" id="kmlMask" onclick="if(event.target===this)closeKml()">
+  <div class="kml-modal">
+    <h3>⬇ 导出 KML（奥维 / 两步路 / 高德网页版）</h3>
+    <p>已自动尝试下载。如果浏览器没有弹出保存——<b>微信内置浏览器、预览面板会拦下载</b>——用下面两个按钮任选其一。</p>
+    <div class="kml-st" id="kmlSt"></div>
+    <div class="kml-act">
+      <button class="primary" id="kmlSave" onclick="kmlSaveFile()">保存为文件</button>
+      <button id="kmlCopyBtn" onclick="kmlCopy()">复制全部内容</button>
+      <button onclick="closeKml()">关闭</button>
+    </div>
+    <p class="kml-fine">手机微信里：右上角 <b>···</b> → 在浏览器中打开，再点「保存为文件」。<br>
+      复制成功后：打开备忘录 / 记事本 → 粘贴 → 存为 <b id="kmlFile">—</b>（KML 是纯文本，手动改名也行）。<br>
+      <b>用高德打开</b>：手机高德 App 不能直接导入 KML，得绕电脑。<b>① 只看轨迹</b>：电脑开高德地图 → 顶部「新功能」→「KML/GPX 轨迹导入」→ 拖入本文件（只画行车线，点位不显示）。
+      <b>② 能上手机</b>：电脑开 wia.amap.com →「创建新地图」→「批量导入」→ <b>数据来源选「谷歌地图」</b>（选高德会失败）→ 手机高德 App「我的 → 地图小程序」里看，点位和路线都在。<br>
+      本文件是 WGS-84 坐标，高德会自动纠偏，不用手动改。<br>
+      <b>说实话</b>：手机上最省事的不一定是 KML——直接点气泡里的「高德导航」更直接（记得在浏览器里打开）。</p>
+    <textarea id="kmlText" readonly spellcheck="false"></textarea>
+  </div>
+</div>
+
+<script>{{LEAFLET_JS}}</script>
+<script>{{APP_JS}}</script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+# 回归基线比对的是字节级 MD5，禁止 git 做换行转换，
+# 否则不同平台 checkout 出来的字节不同，test_regression.py 会无端报错。
+* -text

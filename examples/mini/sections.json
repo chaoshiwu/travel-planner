@@ -1,0 +1,6 @@
+{
+ "hero": "<div class=\"hero\">\n  <h1>天津亲子 2 日</h1>\n  <p>{{N_DAYS}} 天 · {{N_PLACES}} 个点位</p>\n</div>",
+ "weather": "<h2 class=\"sec\">天气</h2><div class=\"wx\"><ul class=\"tips\"><li>晴，20℃。</li></ul></div>",
+ "overview": "<h2 class=\"sec\">路线总览</h2>\n<div class=\"route-line\" id=\"routeLine\"></div>",
+ "footer": "<footer>\n  由 travel-planner 生成（冒烟测试）\n</footer>"
+}
